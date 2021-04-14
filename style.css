@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+.card
+{
+    border: none;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 16px;
+    perspective: 1000px;  
+}
+.card__content {
+    width: 100%;
+    height: 100%;
+    font-family: fantasy;
+}
+.card__inner {
+     width: 100%;
+     height: 100%;
+     transition: transform 1s;
+     transform-style: preserve-3d;
+     cursor: pointer;
+     position: relative;
+}
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+   
+}
+.card-body::after {
+    background-color: rgba(157, 157, 157, 0.12);
+    border: black solid 3px;
+    margin-top: 12px;
+    margin-left: 7px;
+    width: 95%;
+    height: 95%;
+    border-radius: 16px;
+    background-image: url(images/Background/4854824.jpg);
+    z-index: -2;
+    content: '';
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}
+.power-circle {
+    margin-left: auto;
+}
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.card__face {
+    border: black solid 3px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; 
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+.card__face--front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__face--front img {
+    margin: auto;
+    width: 14rem;
+    height: 14rem;
+    object-fit: contain;
+}
+.background-face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    width: 95%;
+    height: 95%;
+    background: rgb(220, 218, 218);
+    border: rgb(47, 47, 47) solid 3px;
+    
+}
+.card__face--back {
+    transform: rotateY(180deg);
+}
+
+.picture {
+    position: relative;    
+    width: 280px;
+    height: 360px;
+    z-index: -1;
+}
+
+.card-footer {
+    width: 95%;
+    margin-left: 6px;
+    margin-top: -120px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(220, 207, 193, 0.703);
+    -webkit-box-shadow: 5px 5px 15px 5px #828282; 
+    box-shadow: 5px 5px 15px 5px #a19c9c;
+   
+}
+.card-header {
+    margin-left: 6px;
+    width: 95%;
+    border: 1px solid rgb(6, 6, 6);
+    background-color: rgba(219, 208, 194, 0.572);
+    -webkit-box-shadow: 5px 5px 15px 5px #828282; 
+    box-shadow: 5px 5px 15px 5px #a19c9c;
+}
